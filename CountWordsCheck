@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+
+        List<String> sentences = Arrays.asList(
+                "Java Stream API provides a fluent interface for processing sequences of elements.",
+                "It supports functional-style operations on streams of elements, such as map-reduce transformations.",
+                "In this exercise, you need to count the total number of words in all sentences."
+        );
+
+        List<String> sentences2 = Arrays.asList(
+                " sds pcГТd asa rrfd bvbgx ",
+                " dfdfd sds fЫФdde ",
+                " gfhj df Ы"
+        );
+
+        System.out.println(countW2(sentences));
+        System.out.println(countW2(sentences2));
+
+    }
+
+    public static int countW2(List<String> s){
+        int c = 0;
+
+        for (String sent : s) {
+            c += sent.split("\\s+").length;
+        }
+        return c;
+    }
+}
